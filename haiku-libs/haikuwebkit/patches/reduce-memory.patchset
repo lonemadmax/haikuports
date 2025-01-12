@@ -1,0 +1,23 @@
+From bd119fb8714d5a7eb6fd6db23dbdee12c254f15a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?M=C3=A1ximo=20Casta=C3=B1eda?= <antiswen@yahoo.es>
+Date: Sat, 11 Jan 2025 12:14:35 +0100
+Subject: Reduce maximum number of files in source bundles
+
+To help compilation in 32bit machines.
+
+diff --git a/Source/WTF/Scripts/generate-unified-source-bundles.rb b/Source/WTF/Scripts/generate-unified-source-bundles.rb
+index 505654a..5793745 100644
+--- a/Source/WTF/Scripts/generate-unified-source-bundles.rb
++++ b/Source/WTF/Scripts/generate-unified-source-bundles.rb
+@@ -71,7 +71,7 @@ $outputXCFilelistPath = nil
+ $maxCppBundleCount = nil
+ $maxCBundleCount = nil
+ $maxObjCBundleCount = nil
+-$maxBundleSize = 8
++$maxBundleSize = 2
+ $denseBundleFilters = []
+ $bundleFilenamePrefix = ''
+ 
+-- 
+2.45.2
+
